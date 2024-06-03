@@ -64,10 +64,9 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
-	{ run_command, "^c#d791a8^ Updates: ^c#FFFFFF^%s",  "aptitude search '~U' | wc -l" },
-	{ cpu_perc, "^c#d791a8^ CPU: ^c#FFFFFF^%s%%", 	NULL },
-	{ ram_perc, "^c#d791a8^ RAM: ^c#FFFFFF^%s%%",	 NULL },
-	{ battery_perc,  "^c#d791a8^ BAT: ^c#FFFFFF^%s%%", "BAT0" },
+    /* function format          argument */
+    {datetime, "%s", "%F %T"},
+    {cpu_perc, "^c#d791a8^ CPU: ^c#FFFFFF^%s%%", NULL},
+    {ram_perc, "^c#d791a8^ RAM: ^c#FFFFFF^%s%%", NULL},
+    {battery_perc, "^c#d791a8^ BAT: ^c#FFFFFF^%s%%", "BAT0"},
 };
