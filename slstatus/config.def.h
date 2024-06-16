@@ -69,4 +69,6 @@ static const struct arg args[] = {
     {cpu_perc, "^c#d791a8^ CPU: ^c#FFFFFF^%s%%", NULL},
     {ram_perc, "^c#d791a8^ RAM: ^c#FFFFFF^%s%%", NULL},
     {battery_perc, "^c#d791a8^ BAT: ^c#FFFFFF^%s%%", "BAT0"},
+    {temp, "^c#d791a8^ TEMP: ^c#FFFFFF^%s\u00b0C",
+     "/sys/class/thermal/thermal_zone0/temp"},
 };
