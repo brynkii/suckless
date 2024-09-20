@@ -16,8 +16,8 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 #define ICONSIZE                      17        /* icon size */
 #define ICONSPACING                   5         /* space between icon and title */
 #define SHOWWINICON                   1         /* 0 means no winicon */
-static const char *fonts[]          = {  "MesloLGS Nerd Font Mono:size=12", "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true" };
-static const char dmenufont[]       = "MesloLGS Nerd Font Mono:size=12";
+static const char *fonts[]          = {  "MesloLGS Nerd Font Mono:size=10", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
+static const char dmenufont[]       = "MesloLGS Nerd Font Mono:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -78,7 +78,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
