@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "MesloLGS Nerd Font Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "MesloLGS Nerd Font Mono:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -94,7 +94,10 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.9;
+
+/* Background opacity */
+float alpha_def;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -204,6 +207,9 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.f = -0.1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.f = -0.1} },
+	{ MODKEY,               XK_bracketleft, chgalpha,       {.f = -1} }, /* Decrease opacity */
+	{ MODKEY|ShiftMask,     XK_braceright,  chgalpha,       {.f = +1} }, /* Increase opacity */
+	{ MODKEY,               XK_bracketright,chgalpha,       {.f =  0} }, /* Reset opacity */
 };
 
 /*
